@@ -1,5 +1,5 @@
 const queryString = {
-  fromString(str) {
+  fromString(str: string) {
     if (!str) {
       return {};
     }
@@ -17,7 +17,7 @@ const queryString = {
       }, {});
   },
 
-  toString(obj) {
+  toString(obj: object) {
     return Object.keys(obj)
       .map(key => `${key}=${obj[key]}`)
       .join("&");
